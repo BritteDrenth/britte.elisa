@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1>Log in</h1>
+        <h6>Gebruik een bestaande gebruikersnaam en wachtwoord om in te loggen. Heb je nog geen account? Registreer je via de button <i>Registreren<i/>!</h6>
+        <br>
+            <form action="/login" method="post">
+                <button onclick="location.href='https://brittedrenth-code50-78801613-r4rprgq5x2wv79-5000.githubpreview.dev/register'" type="button">
+                    Registreren
+                </button><br><br>
+                <div class="mb-3">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Gebruikersnaam" type="text">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Wachtwoord" type="password">
+                </div>
+                <button class="button" type="submit">Inloggen</button><br><br>
+            </form>
+{% endblock %}

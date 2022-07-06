@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Producten
+{% endblock %}
+
+{% block main %}<h1>Producten</h1>
+      <div class="cards">
+        <div class="card">
+          <img class="card__image" src="{{ url_for('static', filename='product 1.png') }}" alt="1">
+          <div class="card__content">
+            <p class="price">vanaf €24.99</p>
+            <p>
+              Dit werk heeft de bewerkingen van het pleister links zitten.
+            </p>
+          </div>
+          <div class="card__info">
+            <div>
+              <a href="./products/1" class="card__link">Bekijk product</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="{{ url_for('static', filename='product 2.png') }}" alt="2">
+          <div class="card__content">
+            <p class="price">vanaf €24.99</p>
+            <p>
+              Dit werk heeft de bewerkingen van het pleister rechts zitten.
+            </p>
+          </div>
+          <div class="card__info">
+            <div>
+              <a href="./products/2" class="card__link">Bekijk product</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="{{ url_for('static', filename='product 3.png') }}" alt="3">
+          <div class="card__content">
+            <p class="price">vanaf €24.99</p>
+            <p>
+              Bij dit werk zit de bewerkingen van het pleister in het midden.
+            </p>
+          </div>
+          <div class="card__info">
+            <div>
+              <a href="./products/3" class="card__link">Bekijk product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

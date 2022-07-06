@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+    <meta name="keywords" content="Britte Elisa, canvas, stuc, pleister, contact">
+    <meta name="description" content="Voor een schoolopdracht en binnenkort echt online: unieke canvas voor aan de muur.
+    Afgewerkt met stuc (pleister). Voor vragen kun je alvast contact met mij opnemen">
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+    <h1>Contact</h1>
+    <p>Bedankt dat je contact met mij opneemt! Waar kan ik je mee helpen? Vul onderstaand formulier in en ik kom zo snel mogelijk bij je terug.<br>
+    Ps. vergeet niet op <i>Verzenden</i> te klikken</p><br>
+    <!-- Contactformulier -->
+        <form action="https://formsubmit.co/britteelisa@gmail.com" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" name="name" placeholder="Naam" required>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" type="email" name="email" placeholder="E-mailadres" required>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" name="message" placeholder="Typ hier jouw bericht" required>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" type="file" name="attachment" placeholder="Voeg een bestand toe (png of jpeg)" accept="image/png, image/jpeg">
+            </div>
+            <button class="button" type="submit">Verzenden</button>
+            <!-- Automatisch antwoord -->
+            <input type="hidden" name="_autoresponse" value="Hi, bedankt dat je contact met mij opneemt. Jouw bericht is ontvangen! &#128140 Wat je kan verwachten...
+            Hieronder zie je een bevestiging van jouw bericht. Ik kom er binnen twee werkdagen (ma-za) op terug. Tot snel!">
+            <!-- Mail in eigen inbox, terugkomen op vraag via contactformulier -->
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Een antwoord op jouw vraag!">
+            <!-- Bedankpagina -->
+            <input type="hidden" name="_next" value="https://brittedrenth-code50-78801613-r4rprgq5x2wv79-5000.githubpreview.dev/thanks">
+        </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <h1>Registreren</h1>
+        <h6>Wat tof dat je een account aanmaakt. Zorg ervoor dat je een gebruikersnaam en wachtwoord invult. Het wachtwoord moet op zijn minst bestaan uit:
+            <ul>
+                <li>1 hoofdletter</li>
+                <li>1 nummer</li>
+                <li>8 karakters</li>
+            </ul>
+        </h6><br>
+            <form action="/register" method="post">
+                <div class="mb-3">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Gebruikersnaam" type="text">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Wachtwoord" type="password">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Bevestig wachtwoord" type="password">
+                </div>
+                <button class="button" type="submit">Register</button>
+            </form>
+{% endblock %}
